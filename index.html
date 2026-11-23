@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaleru Yuvaraj · Python Backend Developer</title>
+  <meta name="description" content="Kaleru Yuvaraj — Python backend developer building FastAPI REST APIs with JWT auth, role-based access and PostgreSQL. Final-year B.Tech CSBS at GITAM, open to fresher roles and internships in Hyderabad.">
+  <meta property="og:title" content="Kaleru Yuvaraj · Python Backend Developer">
+  <meta property="og:description" content="FastAPI, REST APIs, JWT/RBAC, PostgreSQL. Open to fresher backend roles and internships in Hyderabad.">
+  <meta property="og:image" content="assets/og-photo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0F1A2B">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1A2B'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='%233CC6B0'%3EKY%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Kaleru Yuvaraj, back to top">
+        <span class="nav__mark" aria-hidden="true">KY</span>
+        <span>Kaleru Yuvaraj</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav id="nav-links" class="nav__links" aria-label="Sections">
+        <a href="#work">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--small" href="assets/Kaleru_Yuvaraj_Resume.pdf" download>Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__intro">
+          <div class="hero__who">
+            <img class="hero__photo" src="assets/profile.jpg" width="720" height="720" alt="Kaleru Yuvaraj in a navy suit and white shirt">
+            <div>
+              <p class="hero__name">Kaleru Yuvaraj</p>
+              <p class="hero__role">Python Backend Developer</p>
+              <p class="status"><span class="status__dot" aria-hidden="true"></span>Open to fresher roles &amp; internships in Hyderabad</p>
+            </div>
+          </div>
+          <h1>I build FastAPI backends that are secure, documented and deployed.</h1>
+          <p class="hero__lede">Final-year Computer Science &amp; Business Systems student at GITAM, Bengaluru. I design REST APIs with JWT authentication and role-based access, model data with SQLAlchemy, and ship to Vercel and AWS. Previously an AI/ML intern at Infosys Springboard.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#work">See my projects</a>
+            <a class="btn btn--ghost" href="assets/Kaleru_Yuvaraj_Resume.pdf" download>Download resume</a>
+          </div>
+        </div>
+
+        <!-- The memorable thing: an API console that describes me -->
+        <div class="console" aria-label="Interactive API console describing Yuvaraj">
+          <div class="console__bar">
+            <span class="console__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="console__title">yuvaraj-api · Swagger UI</span>
+          </div>
+          <div class="console__body">
+            <ul class="console__routes" role="tablist" aria-label="Endpoints">
+              <li><button role="tab" aria-selected="true" data-route="me"><span class="verb verb--get">GET</span>/me</button></li>
+              <li><button role="tab" aria-selected="false" data-route="stack"><span class="verb verb--get">GET</span>/me/stack</button></li>
+              <li><button role="tab" aria-selected="false" data-route="projects"><span class="verb verb--get">GET</span>/me/projects</button></li>
+              <li><button role="tab" aria-selected="false" data-route="hire"><span class="verb verb--post">POST</span>/hire</button></li>
+            </ul>
+            <div class="console__out" role="tabpanel" aria-live="polite">
+              <div class="console__req"><span class="verb verb--get" id="req-verb">GET</span><span id="req-path">/api/v1/me</span><span class="console__code" id="req-code">200 OK</span></div>
+              <pre><code id="json"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dl class="wrap facts">
+        <div><dt>API endpoints in SupportDesk</dt><dd>13</dd></div>
+        <div><dt>User roles with JWT + RBAC</dt><dd>3</dd></div>
+        <div><dt>Health records processed at Infosys</dt><dd>2,881</dd></div>
+        <div><dt>Certifications</dt><dd>6</dd></div>
+      </dl>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="work-h">Projects</h2>
+          <p>Grouped by the kind of work I'm looking for. Backend first.</p>
+        </div>
+
+        <h3 class="group">Backend &amp; APIs</h3>
+
+        <article class="feature">
+          <div class="feature__text">
+            <h4>SupportDesk: Customer Support Ticket Management System</h4>
+            <p>A full-stack help desk where customers raise tickets, admins assign them to support agents, and agents move them from open to closed. Every route checks who you are and what your role allows.</p>
+            <ul class="points">
+              <li>13 REST endpoints documented with Swagger/OpenAPI: auth, ticket CRUD, assignment, comments, role dashboards</li>
+              <li>JWT login with bcrypt password hashing; role-based access for customer, agent and admin</li>
+              <li>Ticket lifecycle Open → In Progress → Resolved → Closed, with ownership checks and threaded comments</li>
+              <li>Vanilla JS frontend with title search, status and priority filters, date sorting and pagination, deployed on Vercel</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack">
+              <li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>Pydantic</li><li>JWT</li><li>bcrypt</li><li>HTML/CSS/JS</li><li>Vercel</li>
+            </ul>
+            <div class="links">
+              <a class="btn" href="https://support-ticket-api-eosin.vercel.app/" target="_blank" rel="noopener">Open live demo</a>
+              <a class="btn btn--ghost" href="https://github.com/yuvarajkaleru/support-ticket-api" target="_blank" rel="noopener">View code</a>
+            </div>
+          </div>
+          <div class="feature__spec" aria-label="SupportDesk API routes">
+            <p class="spec__title">Routes</p>
+            <ul class="spec">
+              <li><span class="verb verb--post">POST</span>/register</li>
+              <li><span class="verb verb--post">POST</span>/login</li>
+              <li><span class="verb verb--get">GET</span>/users/me</li>
+              <li><span class="verb verb--post">POST</span>/tickets</li>
+              <li><span class="verb verb--get">GET</span>/tickets</li>
+              <li><span class="verb verb--get">GET</span>/tickets/{id}</li>
+              <li><span class="verb verb--put">PUT</span>/tickets/{id}</li>
+              <li><span class="verb verb--del">DELETE</span>/tickets/{id}</li>
+              <li><span class="verb verb--put">PUT</span>/tickets/{id}/assign</li>
+              <li><span class="verb verb--post">POST</span>/tickets/{id}/comments</li>
+              <li><span class="verb verb--get">GET</span>/tickets/{id}/comments</li>
+              <li><span class="verb verb--get">GET</span>/admin/dashboard</li>
+              <li><span class="verb verb--get">GET</span>/agent/dashboard</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="rows">
+          <article class="row">
+            <div class="row__head">
+              <h4>AI-Powered Interview Assistant</h4>
+              <span class="badge badge--wip">In progress · final-year project</span>
+            </div>
+            <p>An interview platform that reads a candidate's resume, matches it against a job description, then runs a voice interview that tests each skill the resume claims, and reports which claims held up.</p>
+            <ul class="points">
+              <li>Resume parsing with PyMuPDF; resume-to-JD matching with sentence embeddings and cosine similarity, listing missing skills</li>
+              <li>LLM-generated technical and behavioural questions per claimed skill, with follow-ups based on the answers</li>
+              <li>Evidence checks that verify each skill against the answers and produce a final report</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack"><li>FastAPI</li><li>PostgreSQL</li><li>PyMuPDF</li><li>Sentence embeddings</li><li>LLM API</li></ul>
+          </article>
+
+          <article class="row">
+            <div class="row__head">
+              <h4>GitHub Project Reviewer AI Agent</h4>
+              <span class="badge">GenAI workshop final project</span>
+            </div>
+            <p>Give it a GitHub username and repository and it returns a mentor-style review: scores for documentation, code structure, project maturity, open-source readiness and how the project reads on a resume.</p>
+            <ul class="points">
+              <li>FastAPI backend that plans which repo data to fetch through MCP-style GitHub tools, then asks Claude Haiku to analyse it</li>
+              <li>React 18 + Tailwind frontend; SQLite/PostgreSQL cache for reviews; Docker Compose setup</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack"><li>FastAPI</li><li>Claude API</li><li>MCP</li><li>React</li><li>Tailwind</li><li>Docker Compose</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/github-project-reviewer-agent" target="_blank" rel="noopener">View code</a></div>
+          </article>
+        </div>
+
+        <h3 class="group">AI &amp; data</h3>
+        <div class="rows">
+          <article class="row">
+            <div class="row__head">
+              <h4>FitPulse: Health Anomaly Detection</h4>
+              <span class="badge">Infosys Springboard internship</span>
+            </div>
+            <p>Turns 30 days of wearable data (heart rate, steps, sleep, stress, calories) into forecasts, alerts and a lifestyle classification, delivered through a Streamlit dashboard. Built over four milestones.</p>
+            <ul class="points">
+              <li>Pandas/NumPy pipeline cleaning and merging 2,881 records from CSV and JSON sources</li>
+              <li>5-day forecasts with Prophet; heart-rate anomaly detection with severity levels (4 anomalies found)</li>
+              <li>Classifies activity as sedentary, moderately active or active; exports CSV reports</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Prophet</li><li>Plotly</li><li>Streamlit</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/Fitpulse-Health-Detection" target="_blank" rel="noopener">View code</a></div>
+          </article>
+
+          <article class="row">
+            <div class="row__head"><h4>GitHub MCP Server</h4></div>
+            <p>A Model Context Protocol server that lets AI assistants list a user's public repositories and read their READMEs from the real GitHub API, instead of guessing. Works with Claude Desktop, Cursor and other MCP clients.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Node.js</li><li>MCP</li><li>GitHub REST API</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/github-mcp-server" target="_blank" rel="noopener">View code</a></div>
+          </article>
+
+          <article class="row">
+            <div class="row__head"><h4>AI Automation Workflows</h4></div>
+            <p>Four n8n workflows: a document Q&amp;A agent (Google Drive → OpenAI embeddings → Pinecone), a persistent-memory agent on Supabase and Gemini, a scheduled content analyser with structured GPT output, and a text-to-video pipeline on Replicate with async status polling.</p>
+            <ul class="tags" aria-label="Tech stack"><li>n8n</li><li>RAG</li><li>Pinecone</li><li>Supabase</li><li>OpenAI</li><li>Gemini</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/ai-automation-n8n-workflows" target="_blank" rel="noopener">View code</a></div>
+          </article>
+        </div>
+
+        <h3 class="group">Cloud, automation &amp; Java</h3>
+        <div class="rows rows--compact">
+          <article class="row">
+            <div class="row__head"><h4>Telegram Job-Alert Bot</h4><span class="badge">Private repo</span></div>
+            <p>Scrapes fresh Python and FastAPI openings with JobSpy, scores each against my resume, and sends them to Telegram with approve/reject buttons. Runs on a schedule with GitHub Actions.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Python</li><li>JobSpy</li><li>Telegram Bot API</li><li>GitHub Actions</li></ul>
+          </article>
+          <article class="row">
+            <div class="row__head"><h4>Jenkins on AWS EC2</h4></div>
+            <p>Launched an EC2 instance, configured security-group inbound rules, installed Jenkins as a service and exposed it publicly.</p>
+            <ul class="tags" aria-label="Tech stack"><li>AWS EC2</li><li>Jenkins</li><li>Linux</li></ul>
+          </article>
+          <article class="row">
+            <div class="row__head"><h4>AWS Resource Tracker</h4></div>
+            <p>A Bash script that reports S3 buckets, EC2 instances, Lambda functions and IAM users through the AWS CLI.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Bash</li><li>AWS CLI</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/Bash_Scripts" target="_blank" rel="noopener">View code</a></div>
+          </article>
+          <article class="row">
+            <div class="row__head"><h4>JDBC SQLite Pipeline</h4></div>
+            <p>A Java application that connects to SQLite over JDBC and runs DDL and CRUD operations with proper connection and result-set handling.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Java 17</li><li>JDBC</li><li>SQLite</li></ul>
+            <div class="links"><a class="link" href="https://github.com/yuvarajkaleru/JDBC-SQLite-Pipeline" target="_blank" rel="noopener">View code</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE + EDUCATION -->
+    <section class="section section--alt" id="experience" aria-labelledby="exp-h">
+      <div class="wrap two">
+        <div>
+          <h2 id="exp-h">Experience</h2>
+          <article class="job">
+            <p class="job__when">Nov 2025 – Jan 2026</p>
+            <h3>AI/ML Intern, Infosys Springboard</h3>
+            <p class="job__sub">Internship 6.0 · FitPulse program · Virtual</p>
+            <ul class="points">
+              <li>Built a Python pipeline with Pandas and NumPy to clean and process 2,881 records across 30 days of heart-rate, step, stress and calorie data, flagging 4 anomalies.</li>
+              <li>Implemented a 5-day time-series forecast, activity classification and CSV report generation, delivered through an interactive Streamlit dashboard.</li>
+              <li>Visualised trends across 4 health metrics, turning raw device data into insights on activity and stress.</li>
+            </ul>
+          </article>
+
+          <h2 class="mt">Leadership</h2>
+          <article class="job">
+            <p class="job__when">2024 – 2025</p>
+            <h3>Inclusion Officer, GITAM GitHub Club</h3>
+            <p class="job__sub">Core team</p>
+            <p>Worked on making the club's open-source sessions and technical events welcoming to students from every branch and background.</p>
+          </article>
+        </div>
+
+        <div>
+          <h2>Education</h2>
+          <ol class="timeline">
+            <li>
+              <p class="job__when">2023 – 2027 (expected)</p>
+              <h3>B.Tech, Computer Science &amp; Business Systems</h3>
+              <p class="job__sub">GITAM University, Bengaluru · CGPA 7.36</p>
+            </li>
+            <li>
+              <p class="job__when">2023</p>
+              <h3>Intermediate (Class XII, MPC)</h3>
+              <p class="job__sub">Narayana Junior College, Hyderabad · 70.01%</p>
+            </li>
+            <li>
+              <p class="job__when">2021</p>
+              <h3>SSC (Class X)</h3>
+              <p class="job__sub">Joshi's Vidhyaniketan School, Uppal · 95%</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="skills-h">Skills</h2>
+          <p>What I use, and where I've used it.</p>
+        </div>
+        <dl class="skills">
+          <div><dt>Backend &amp; APIs</dt><dd>FastAPI, REST, Pydantic, JWT, RBAC, Swagger/OpenAPI, Uvicorn</dd></div>
+          <div><dt>Languages</dt><dd>Python, Java, JavaScript, Bash, SQL</dd></div>
+          <div><dt>Databases</dt><dd>PostgreSQL, SQLAlchemy, MySQL, SQLite</dd></div>
+          <div><dt>Cloud &amp; DevOps</dt><dd>AWS (EC2, S3, IAM, VPC), Docker, Kubernetes basics, Jenkins, GitHub Actions, Vercel, Linux</dd></div>
+          <div><dt>AI &amp; data</dt><dd>Pandas, NumPy, Prophet, Plotly, Streamlit, anomaly detection, RAG, MCP, n8n</dd></div>
+          <div><dt>Frontend</dt><dd>HTML5, CSS3, JavaScript (Fetch API)</dd></div>
+          <div><dt>Foundations</dt><dd>Data structures &amp; algorithms, object-oriented programming, Git &amp; GitHub</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section section--alt" id="certificates" aria-labelledby="cert-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="cert-h">Certificates</h2>
+          <p>Select a certificate to view it.</p>
+        </div>
+        <ul class="certs">
+          <li class="cert">
+            <button class="cert__view" data-img="assets/certificates/infosys-springboard-internship.png" data-title="Internship 6.0 Completion: FitPulse, Infosys Springboard">
+              <img src="assets/certificates/infosys-springboard-internship.png" alt="" loading="lazy">
+            </button>
+            <h3>Internship 6.0 Completion: FitPulse</h3>
+            <p>Infosys Springboard · Nov 2025 – Jan 2026</p>
+          </li>
+          <li class="cert">
+            <button class="cert__view" data-img="assets/certificates/gitam-genai-workshop.png" data-title="Mastering Advanced Generative AI, GITAM School of CSE, Bengaluru">
+              <img src="assets/certificates/gitam-genai-workshop.png" alt="" loading="lazy">
+            </button>
+            <h3>Mastering Advanced Generative AI (6-day workshop)</h3>
+            <p>GITAM School of CSE, Bengaluru · Dec 2025</p>
+          </li>
+          <li class="cert">
+            <button class="cert__view" data-img="assets/certificates/scaler-docker-kubernetes.png" data-title="Fundamentals of Docker &amp; Kubernetes Masterclass, Scaler">
+              <img src="assets/certificates/scaler-docker-kubernetes.png" alt="" loading="lazy">
+            </button>
+            <h3>Fundamentals of Docker &amp; Kubernetes</h3>
+            <p>Scaler Masterclass · Dec 2025</p>
+          </li>
+          <li class="cert">
+            <button class="cert__view" data-img="assets/certificates/iitr-ecell-frontend.png" data-title="Web Development Front-End, E-Cell IIT Roorkee × 1stop">
+              <img src="assets/certificates/iitr-ecell-frontend.png" alt="" loading="lazy">
+            </button>
+            <h3>Web Development Front-End</h3>
+            <p>E-Cell IIT Roorkee × 1stop · Jul – Aug 2024</p>
+          </li>
+          <li class="cert cert--text">
+            <div class="cert__seal" aria-hidden="true">AWS</div>
+            <h3>AWS Basics</h3>
+            <p>KodeKloud · Dec 2025</p>
+            <p class="cert__id">Credential ID e2fabf22-04a3-4928-937d-1456ebcc72b2</p>
+          </li>
+          <li class="cert cert--text">
+            <div class="cert__seal" aria-hidden="true">AI</div>
+            <h3>AI Tools Workshop</h3>
+            <p>House of Edtech · Jul 2026</p>
+            <p class="cert__id">Credential ID e4b9c371-a929-4fd1-a583-7be48a58cf39</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BEYOND CODE -->
+    <section class="section" aria-labelledby="beyond-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="beyond-h">Away from the keyboard</h2>
+        </div>
+        <ul class="beyond">
+          <li><strong>District runner-up, 100m sprint</strong><span>Golconda Athletics Meet</span></li>
+          <li><strong>School chess champion</strong><span>Still thinking three moves ahead</span></li>
+          <li><strong>Long-distance cycling</strong><span>And the occasional fitness challenge</span></li>
+          <li><strong>Automating the boring parts</strong><span>Including my own job search</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap contact__inner">
+        <div>
+          <h2 id="contact-h">Hiring a fresher backend developer in Hyderabad?</h2>
+          <p>I'm available for full-time roles and internships. Email is the fastest way to reach me.</p>
+        </div>
+        <ul class="contact__list">
+          <li><span>Email</span><a href="mailto:yuvaraj.kaleru.dev@gmail.com">yuvaraj.kaleru.dev@gmail.com</a>
+            <button class="copy" data-copy="yuvaraj.kaleru.dev@gmail.com">Copy</button></li>
+          <li><span>Phone</span><a href="tel:+919392716766">+91 93927 16766</a></li>
+          <li><span>LinkedIn</span><a href="https://linkedin.com/in/yuvarajkaleru" target="_blank" rel="noopener">linkedin.com/in/yuvarajkaleru</a></li>
+          <li><span>GitHub</span><a href="https://github.com/yuvarajkaleru" target="_blank" rel="noopener">github.com/yuvarajkaleru</a></li>
+          <li><span>Instagram</span><a href="https://instagram.com/yuvarajkaleru" target="_blank" rel="noopener">@yuvarajkaleru</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Kaleru Yuvaraj</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer__head">
+      <p id="viewer-title"></p>
+      <button class="viewer__close" id="viewer-close">Close</button>
+    </div>
+    <img id="viewer-img" src="" alt="">
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
